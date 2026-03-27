@@ -10,17 +10,12 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            string nombre;
-            string juego;
-            string consola;
+          
             Console.WriteLine("Hola wachin");
-            Console.Write("como te llamas wachin?: ");
-            nombre = Console.ReadLine();
-            Console.Write("cual es tu juego favorito?: ");
-            juego = Console.ReadLine();
-            Console.Write("en que consola se juega?: ");
-            consola = Console.ReadLine();
-            Console.WriteLine("hola " + nombre + ".Tu juego favorito es " + juego + " y se juega en " + consola + "." );
+            Console.Write("en que año naciste?: ");
+            int año = Convert.ToInt32(Console.ReadLine());
+            int edad = 2026-año;
+            Console.WriteLine("Si naciste en el año " + año + " tu edad al comenzar el año es de " + edad + " años.");
         }
     }
 }
