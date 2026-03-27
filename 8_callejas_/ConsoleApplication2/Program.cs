@@ -11,13 +11,16 @@ namespace ConsoleApplication2
         static void Main(string[] args)
         {
             string nombre;
-            string pelicula;
+            string juego;
+            string consola;
             Console.WriteLine("Hola wachin");
             Console.Write("como te llamas wachin?: ");
             nombre = Console.ReadLine();
-            Console.Write("cual es tu pelicula favorita?: ");
-            pelicula = Console.ReadLine();
-            Console.WriteLine("hola " + nombre + ".Tu pelicula favorita " + pelicula + " es una porqueria.");
+            Console.Write("cual es tu juego favorito?: ");
+            juego = Console.ReadLine();
+            Console.Write("en que consola se juega?: ");
+            consola = Console.ReadLine();
+            Console.WriteLine("hola " + nombre + ".Tu juego favorito es " + juego + " y se juega en " + consola + "." );
         }
     }
 }
