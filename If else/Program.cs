@@ -4,28 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication4
+namespace ConsoleApplication3
 {
     class Program
     {
         static void Main(string[] args)
         {
-         Console.Write("cantidad de midiclorianos");
-         int n = Convert.ToInt32(Console.ReadLine());
-         if (n > 15000)
+         Console.Write("los kg son ");
+         int kg = Convert.ToInt32(Console.ReadLine());
+         int resto = kg - 5000;
+         if (kg <= 5000)
             {
-             Console.WriteLine("Potencial Maestro Jedi detectado. Avisar al Consejo");
+                Console.WriteLine("Despegue autorizado. Buen viaje, mando");
             }
          else
             {
-             if (n > 4999 & n < 1501)
-                {
-                 Console.WriteLine("Aceptable para entrenamiento Padawan");
-                }
-                else
-                {
-                 Console.WriteLine("No posee sensibilidad a la Fuerza");
-                }
+             Console.WriteLine("Alerta: Exceso de peso.Debes descargar " + resto +  " kg para despegar");
             }
         }
     }
