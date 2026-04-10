@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("edad del primer hermano: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.Write("edad del segundo hermano: ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            if (p > s )
+            {
+                int n = p - s;
+                Console.WriteLine("el primer hermano es mayor por "+ n +" años");
+            }
+            if (s > p)
+            {
+                int m = s - p;
+                Console.WriteLine("el segundo hermano es mayor por "+m+" años");
+            }
+        }
+    }
+}
+
