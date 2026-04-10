@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("presupuesto: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.Write("costo de los materiales: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (c > p)
+            {
+                int f = c - p; 
+                Console.WriteLine(f+ " es lo que tenemos q pedir prestado");
+            }
+            else
+            {
+                Console.WriteLine("llegamos sobrados con la plata");
+            }
+        }
+    }
+}
+
