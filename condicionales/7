@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("cual es la temperatura actual?: ");
+            int tem = Convert.ToInt32(Console.ReadLine());
+            if (tem < 0)
+            {
+                Console.WriteLine("PELIGRO de congelamiento");
+            }
+            if (tem >= 0 & tem < 16)
+            {
+                Console.WriteLine("mucho frio");
+            }
+            if (tem > 15)
+            {
+                Console.WriteLine("clima agradable");
+            }
+        }
+    }
+}
