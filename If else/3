@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         Console.Write("a cuantos años luz esta el destino?: ");
+         int años = Convert.ToInt32(Console.ReadLine());
+         Console.Write("cuantos litros de combustible tenemos en el tanque?: ");
+         int L = Convert.ToInt32(Console.ReadLine());
+         double con = (double)L / 12;
+         double X = (double) (años*12)-L ;
+            if (con >= años)
+            {
+             Console.WriteLine("Cálculos precisos. Saltando al hiperespacio ");
+            }   
+            else
+            {
+                Console.WriteLine("Peligro: Combustible insuficiente. Faltan "+ X +" litros");
+            }   
+        }
+    }
+}
