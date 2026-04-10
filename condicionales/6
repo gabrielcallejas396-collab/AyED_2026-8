@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("introdusca nombre de usuario: ");
+            string no = Console.ReadLine();
+            
+            Console.Write("introdusca contraseña: ");
+            string con = Console.ReadLine();
+
+            if (no == "admin" & con == "1234")
+            {
+                Console.WriteLine("acceso concedido ");
+            }
+            else
+            {
+                Console.WriteLine("Error de credenciales");
+            }
+        }
+    }
+}
