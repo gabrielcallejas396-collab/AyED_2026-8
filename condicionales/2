@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("hola como te llamas?: ");
+            string n = Console.ReadLine();
+            Console.Write("cuantos años tienes?: ");
+            int años = Convert.ToInt32(Console.ReadLine());
+            if (años >= 18)
+            {
+                Console.WriteLine("Bienvenido al club," + n);
+            }
+            else
+            {
+                Console.WriteLine("Lo siento, eres muy polluelo para esto");
+            }
+        }
+    }
+}
