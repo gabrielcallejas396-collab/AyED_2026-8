@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese el promedio: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("ingrese la distancia entre su casa y la facultad");
+            int k = Convert.ToInt32(Console.ReadLine());
+            if (p > 8)
+            {
+                Console.WriteLine("Beca concedida");
+            }
+            if (k > 50)
+            {
+                Console.WriteLine("Beca concedida");
+            }
+        }
+    }
+}
