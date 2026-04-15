@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("inserte el genero M o F: ");
+            string g = Console.ReadLine();
+            Console.Write("inserte la edad: ");
+            int e = Convert.ToInt32(Console.ReadLine());
+            if (g == "F")
+            {
+                if (e >= 60)
+                {
+                    Console.WriteLine("puede iniciar trámite jubilatorio");
+                }
+                else
+                {
+                    Console.WriteLine("todavia no puede iniciar el tramite");
+                }
+            }
+            if (g == "M")
+            {
+                if (e >= 65)
+                {
+                    Console.WriteLine("puede iniciar trámite jubilatorio");
+                }
+                else
+                {
+                    Console.WriteLine("todavia no puede iniciar el tramite");
+                }
+            }
+        }
+    }
+}
