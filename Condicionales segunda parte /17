@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("saldo actual: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("ingrese la cantidad que desee retirar: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            if (p > a)
+            {
+                Console.WriteLine("fondos insuficientes");
+            }
+            int r = p % 1000;
+            if (r == 0)
+            {
+                Console.WriteLine("operacion con exito espero un momento para recibir su plata... pi... pu...");
+            }
+            else
+            {
+                Console.WriteLine("solo se puede retirar en billetes de 1000");
+            }
+        }
+    }
+}
