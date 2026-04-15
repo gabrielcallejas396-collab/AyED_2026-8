@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("inserte el peso: ");
+            double p = (double)Convert.ToDouble(Console.ReadLine());
+            Console.Write("inserte la altura: ");
+            double al = (double)Convert.ToDouble(Console.ReadLine());
+            double i = (double)p/ al;
+            if (i > 25)
+            {
+                Console.WriteLine("sobre peso");
+            }
+            else
+                Console.WriteLine("rango normal");
+        }
+    }
+}
