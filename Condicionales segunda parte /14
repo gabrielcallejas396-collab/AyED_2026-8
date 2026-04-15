@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese el salario: ");
+            int sa = Convert.ToInt32(Console.ReadLine());
+            Console.Write("ingrese los años de antiguedad: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            if ( a > 10)
+            {
+                double m = (double) sa * 0.20 ;
+               
+                double total = (double) sa + m ;
+                Console.WriteLine("el salario queda en " + total);
+            }
+            if (a < 10)
+            {
+                double m = (double)sa * 0.05 ;
+                
+                double total = (double)sa + m;
+                Console.WriteLine("el salario queda en " + total);
+            }
+        }
+    }
+}
