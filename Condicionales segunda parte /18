@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            Console.Write("ingrese el segundo numero: ");
+            int s = Convert.ToInt32(Console.ReadLine());
+            Console.Write("ingrese el tercer numero: ");
+            int t = Convert.ToInt32(Console.ReadLine());
+            if (s > p || s > t)
+            {
+                if (s > t & s > p)
+                {
+                    Console.WriteLine(s + " es el numero mas grande de los 3");
+                }
+
+            }
+            if (p > s || p > t)
+            {
+                if (p > t & p > s)
+                {
+                    Console.WriteLine(p + " es el numero mas grande de los 3");
+                }
+
+            }
+            if (t > p || t > s)
+            {
+                if (t > s & t > p)
+                {
+                    Console.WriteLine(t + " es el numero mas grande de los 3");
+                }
+
+            }
+        }
+    }
+}
