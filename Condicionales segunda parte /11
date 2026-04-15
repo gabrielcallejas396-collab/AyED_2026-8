@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("inserte un numero para el primer lado: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("inserte un numero para el segundo lado: ");
+            int b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("inserte un numero para el tercer lado: ");
+            int c = Convert.ToInt32(Console.ReadLine());
+            if (a == b)
+            {
+                
+             if (b == c)
+                {
+                    Console.WriteLine("el triangulo es equilatero");
+                }
+             else
+                {
+                    Console.WriteLine(" el triangulo es isósceles");
+                }
+            }
+            else
+            {
+                if (b == c)
+                {
+                    Console.WriteLine("el triangulo es isósceles");
+                }
+                else
+                {
+                    Console.WriteLine("el triangulo es escaleno");
+                }
+            }
+        }
+    }
+}
