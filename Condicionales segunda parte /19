@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("cuantas horas dejo el auto?: ");
+            int h = Convert.ToInt32(Console.ReadLine());
+            Console.Write("con cuanto dinero vas a pagar?: ");
+            int d = Convert.ToInt32(Console.ReadLine());
+            if (h == 1)
+            {
+                int p = 4000;
+                if (d > p)
+                {
+                    int f = d - p;
+                    Console.WriteLine("el dinero alcanza para pagar le sobra " + f + " pesos");
+                }
+                else
+                {
+                    int f = p - d;
+                    Console.WriteLine("faltan " + f + " pesos para pagar");
+                }
+            }
+            if (h > 1)
+            {
+                int e = h - 1;
+                int p = 4000 + (e * 1600);
+                if (d > p)
+                {
+                    int f = d - p;
+                    Console.WriteLine("el dinero alcanza para pagar le sobra " + f + " pesos");
+                }
+                else
+                {
+                    int f = p - d;
+                    Console.WriteLine("faltan " + f + " pesos para pagar");
+                }
+            }
+
+
+
+        }
+    }
+}
