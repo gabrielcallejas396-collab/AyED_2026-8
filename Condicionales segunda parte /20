@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("cuantas facturas se producieron al inicio del dia?: ");
+            int f = Convert.ToInt32(Console.ReadLine());
+            Console.Write("cuantas docenas completas?: ");
+            int d = Convert.ToInt32(Console.ReadLine());
+            Console.Write("cual es el precio por docena?: ");
+            int p = Convert.ToInt32(Console.ReadLine());
+            int cosi = f / 12;
+            int res = f - (12 * cosi);
+            int pla = d * p;
+            Console.WriteLine("sobraron " + res + " facturas");
+            Console.WriteLine("se recaudaron " + pla + " pesos");
+            if (res > 6 )
+            {
+                Console.WriteLine("Alerta: Exceso de producción");
+            }
+            else
+            {
+                Console.WriteLine("Producción eficiente");
+            }
+        }
+    }
+}
