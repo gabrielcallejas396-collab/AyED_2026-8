@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("ingrese una letra");
+            Console.WriteLine("1)A");
+            Console.WriteLine("2)B");
+            Console.WriteLine("3)C");
+            Console.WriteLine("4)D");
+            Console.WriteLine("5)F");
+            Console.Write("ingrese uno de los numeros ");
+            int opcion = int.Parse(Console.ReadLine());
+            switch (opcion)
+            {
+                case 1:
+                    Console.WriteLine("excelente");
+                    break;
+                case 2:
+                    Console.WriteLine("bueno");
+                    break;
+                case 3:
+                    Console.WriteLine("regular");
+                    break;
+                case 4:
+                    Console.WriteLine("suficiente");
+                    break;
+                case 5:
+                    Console.WriteLine("reprobado");
+                    break;
+            }
+        }
+    }
+}
