@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero entero: ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int di = 0;
+            int n = 0;
+            for (int i = 1; i <= num; i++)
+            {
+              n = n + 1;
+              int nu = num % n;
+              
+                if (nu == 0)
+                {
+                 di = di + 1;
+                }
+                if (nu == 0 & n > 1 & n < num & di < 3)
+                {
+                    Console.WriteLine("el primer divisor aparte de 1 y " + num + " es " + n +"");
+                }
+            }
+            if (di < 3)
+            {
+                Console.WriteLine("es un numero primo");
+            }
+            else
+            {
+                Console.WriteLine("no es un numero primo");
+            }
+        }
+    }
+} 
