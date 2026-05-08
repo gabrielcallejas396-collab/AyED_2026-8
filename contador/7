@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("(1) ingles");
+            Console.WriteLine("(2) frances");
+            Console.WriteLine("(3) aleman");
+            Console.Write("elija un idioma: ");
+            int m = int.Parse(Console.ReadLine());
+            switch (m)
+            {
+                case 1:
+                    Console.WriteLine("hello");
+                    break;
+                case 2:
+                    Console.WriteLine("salut");
+                    break;
+                case 3:
+                    Console.WriteLine("hallo");
+                    break;
+              
+            }
+        }
+    }
+}
