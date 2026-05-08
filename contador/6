@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int san = 2500;
+            int pizz = 8000;
+            int ham = 4000;
+            Console.WriteLine("menu");
+            Console.WriteLine("(S)ándwich");
+            Console.WriteLine("(P)izza");
+            Console.WriteLine("(H)amburguesa");
+            Console.Write("eliga su pedido: ");
+            string  m = (Console.ReadLine());
+            switch (m)
+            {
+                case "S":
+                        Console.WriteLine("el presio del sandwiche es de " + san + " pesos");
+                    break;
+                case "P":
+                        Console.WriteLine("el presio de la pizza es de " + pizz + " pesos");
+                    break;
+                case "H":
+                    Console.WriteLine("el presio de la hamburguesa es de " + ham + " pesos");
+                    break;
+                default:
+                    Console.WriteLine("producto no encontrado");
+                    break;
+            }
+        }
+    }
+}
