@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int gast = 0;
+            int p = 0;
+            int tol = 0;
+            for (int i = 1; i <= 5; i++)
+            {
+                Console.Write("ingrese el gasto :");
+                gast = int.Parse(Console.ReadLine());
+                tol = gast + tol;
+                if (gast > 500)
+                {
+                    p = p + 1;
+                }
+            }
+            Console.WriteLine("el gasto total fue "+tol+" y "+p+" fueron los q son mayores a 500");
+        }
+    }
+}
