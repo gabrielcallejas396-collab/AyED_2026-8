@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero para empezar la cuneta regresiva: ");
+            int nume = int.Parse(Console.ReadLine());
+            int cont = 0;
+            Console.WriteLine("empieza la cuenta regresiva:");
+            while(nume > 0)
+            {
+                Console.WriteLine("numero " + nume +"");
+                nume--;
+                cont++;
+            }
+            Console.WriteLine("los numeros contados son: " + cont +"");
+        }
+    }
+}
