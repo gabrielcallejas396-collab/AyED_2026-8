@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("defina una contraseña: ");
+            string guardada = (Console.ReadLine());
+            Console.Write("introdusca la contraseña: ");
+            string intento = (Console.ReadLine());
+            do
+            {
+                Console.Write("introdusca la contraseña: ");
+                intento = (Console.ReadLine());
+            } while (intento != guardada);
+            Console.WriteLine("acceso permitido");
+        }
+    }
+}
