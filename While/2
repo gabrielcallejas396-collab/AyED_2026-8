@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese el numero de la nota: ");
+            int num = int.Parse(Console.ReadLine());
+            do
+            {
+                if (num >= 11 || num <= 0)
+                {
+                    Console.Write("ingrese devuelta la nota: ");
+                    int nu = int.Parse(Console.ReadLine());
+                    num = nu;
+                }
+                
+            } while (num >= 11 || num<= 0);
+            Console.WriteLine("la nota final es " + num + "");
+        }
+    }
+}
