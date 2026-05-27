@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese la temperatura inicial: ");
+            int temperatura = int.Parse(Console.ReadLine());
+            do
+            {
+                temperatura = temperatura - 2;
+                Console.WriteLine("enfriando... temperatura actual: " + temperatura + "°C");
+            } while (temperatura > 24);
+            Console.WriteLine("temperatura ideal alcanzada");
+        }
+    }
+}
