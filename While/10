@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero: ");
+            int A = int.Parse(Console.ReadLine());
+            Console.Write("ingrese otro numero: ");
+            int B = int.Parse(Console.ReadLine());
+            int contador = 0;
+            int multi = 0;
+            while (B > contador)
+            {
+                
+                
+                multi = multi + A;
+                contador++;
+                Console.WriteLine("" + multi + "");
+            } 
+            Console.WriteLine("el numero que da es "+multi+" "+contador+" ");
+        }
+    }
+}
