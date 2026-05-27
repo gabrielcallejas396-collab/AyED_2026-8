@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         Console.WriteLine("ingrese 5 notas de los alumnos: ");
+         int contador = 5;
+            int total = 0;
+            do
+            {
+                Console.Write("ingrese una nota: ");
+                int nota = int.Parse(Console.ReadLine());
+                total = total+nota;
+                contador--;
+            } while (contador > 0);
+            Console.WriteLine("el total de las notas sumadas es " + total + "");
+        }
+    }
+}
