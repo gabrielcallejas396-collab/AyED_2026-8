@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int opcion = 0;
+            while(opcion < 3)
+            {
+                Console.WriteLine("MENU:");
+                Console.WriteLine("1_saludar");
+                Console.WriteLine("2_despedirse");
+                Console.WriteLine("3_salir");
+                Console.Write("ingrese una opcion: ");
+                opcion = int.Parse(Console.ReadLine());
+            }
+        }
+    }
+}
