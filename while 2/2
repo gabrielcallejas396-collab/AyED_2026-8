@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero = 0;
+            int intentos = 0;
+            while ((67 > numero || 67 < numero) & intentos < 5)
+            {
+                intentos++;
+                Console.WriteLine("adivina el numero:");
+                Console.Write("ingrese el numero q piense q es : ");
+                numero = int.Parse(Console.ReadLine());
+                if (67 > numero || 67 < numero)
+                {
+                    if(intentos == 2)
+                    {
+                        Console.WriteLine("el numero esta entre 50 y 90");
+                    }
+                    if(intentos == 4)
+                    {
+                        Console.WriteLine("el numero es un meme famoso");
+                    }
+                }
+            }
+            if (numero == 67)
+            {
+                Console.WriteLine("genaste te tomo " + intentos + " intentos");
+            }
+            else
+            {
+                Console.WriteLine("perdiste");
+            }
+        }
+    }
+}
