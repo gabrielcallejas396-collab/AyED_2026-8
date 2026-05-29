@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int saldo = 10000;
+            int opcion = 0;
+            while (4 > opcion)
+            {   
+                Console.WriteLine("MENU:");
+                Console.WriteLine("1_ depositar dinero");
+                Console.WriteLine("2_ retirar dinero");
+                Console.WriteLine("3_ ver saldo actual");
+                Console.WriteLine("4_ salir");
+                Console.Write("ingrese una opcion: ");
+                int elegido = int.Parse(Console.ReadLine());
+                switch (elegido)
+                {
+                    case 1:
+                        opcion = 1;
+                        Console.Write("ingrese la cantidad que quiere depositar: ");
+                        int suma = int.Parse(Console.ReadLine());
+                        saldo = saldo + suma ;
+                        break;
+                    case 2:
+                        opcion = 2;
+                        Console.Write("ingrese la cantidad que quiere retirar: ");
+                        int resta = int.Parse(Console.ReadLine());
+                        saldo = saldo - resta;
+                        break;
+                    case 3:
+                        opcion = 3;
+                        Console.WriteLine(""+saldo+"");
+                        break;
+                    case 4:
+                        opcion = 4;
+                        Console.WriteLine("hasta la proxima");
+                        break; 
+                }
+            }
+        }
+    }
+}
