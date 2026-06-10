@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int negativos = 0;
+            int positivos = 0;
+            int ceros = 0;
+            string numero = "0";
+            while(Convert.ToString(numero) != "x" || Convert.ToString(numero) != "n")
+            {
+                Console.Write("ingrese un numero: ");
+                numero = Console.ReadLine();
+                int num = int.Parse(numero);
+                if (num < 0)
+                {
+                 negativos++;
+                }
+                if (num > 0)
+                {
+                 positivos++;
+                }
+                if (num == 0)
+                {
+                 ceros++;
+                }
+               
+            }
+            Console.WriteLine("la cantidad de numeros positivos es " + positivos + " la cantidad de negativos es " + negativos + " la cantidad de ceros es " + ceros + "");
+        }
+    }
+}
