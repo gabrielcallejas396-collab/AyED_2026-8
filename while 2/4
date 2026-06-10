@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int intentos = 0;
+            string usuario = "gabi";
+            string contraseña = "gabi3546d";
+            while (intentos != 3)
+            {
+                Console.Write("ingrese el usuario: ");
+                string u = Console.ReadLine();
+                Console.Write("ingrese la contraseña: ");
+                string c = Console.ReadLine();
+                if (u == usuario & c == contraseña)
+                {
+                    Console.WriteLine("bienvenido al sistema");
+                    intentos = 3;
+                }
+                else
+                {
+                    intentos++;
+                      if (intentos == 3)
+                      {
+                        Console.WriteLine("cuenta bloqueada por seguridad");
+                      } 
+                }
+            }
+        }
+    }
+}
