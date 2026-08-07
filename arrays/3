@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int P = 0;
+            int A = 0;
+            string[] clases = new string[20];
+            for (int i = 0; i < clases.Length; i++)
+            {
+                Console.Write("el alumno estuvo (A)usente o (P)resente: ");
+                clases[i] = Console.ReadLine();
+                if (clases[i] == "a" || clases[i] == "A")
+                {
+                    A++;
+                }
+                if (clases[i] == "p" || clases[i] == "P")
+                {
+                    P++;
+                }
+            }
+            if (A > 6)
+            {
+                Console.WriteLine("el alumno quedo libre");
+            }
+            else
+            {
+                Console.WriteLine("alumno regular");
+            }
+        }
+    }
+}
