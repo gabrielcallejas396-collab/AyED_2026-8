@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int pro = 0;
+            int baja = 100;
+            int alta = 0;
+            int[] temperatura = new int[7];
+            for (int i = 0 ; i < temperatura.Length ; i++)
+            {
+                Console.Write("ingrese la temperatura de hoy: ");
+                int num = int.Parse(Console.ReadLine());
+                pro = pro + num;
+                temperatura[i] = num;
+                if (num < baja)
+                {
+                    baja = num;
+                } 
+                if (num > alta)
+                {
+                    alta = num;
+                }
+            }
+            int promedio = pro / 7;
+            Console.WriteLine("la temperatura mas baja de la semana es de " + baja + " grados, la mas alta de la semana es de " + alta + " grados y el promedio es de " + promedio + " grados");
+        }
+    }
+}
