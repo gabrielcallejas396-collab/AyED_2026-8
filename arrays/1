@@ -14,19 +14,18 @@ namespace ConsoleApplication1
             int baja = 100;
             int alta = 0;
             int[] temperatura = new int[7];
-            for (int i = 0 ; i < temperatura.Length ; i++)
+            for (int i = 0; i < temperatura.Length; i++)
             {
                 Console.Write("ingrese la temperatura de hoy: ");
-                int num = int.Parse(Console.ReadLine());
-                pro = pro + num;
-                temperatura[i] = num;
-                if (num < baja)
+                temperatura[i] = int.Parse(Console.ReadLine());
+                pro = pro + temperatura[i];
+                if (temperatura[i] < baja)
                 {
-                    baja = num;
-                } 
-                if (num > alta)
+                    baja = temperatura[i];
+                }
+                if (temperatura[i] > alta)
                 {
-                    alta = num;
+                    alta = temperatura[i];
                 }
             }
             int promedio = pro / 7;
