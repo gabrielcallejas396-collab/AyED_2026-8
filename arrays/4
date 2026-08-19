@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int cantidad = 0;
+            int[] precio = new int[8];
+            precio[0] = 800;
+            precio[1] = 500;
+            precio[2] = 4000;
+            precio[3] = 1500;
+            precio[4] = 2500;
+            precio[5] = 100;
+            precio[6] = 200;
+            precio[7] = 3000;
+            string[] prod = new string[8];
+            prod[0] = "alfajores";
+            prod[1] = "turrones";
+            prod[2] = "cocacolas";
+            prod[3] = "moguls";
+            prod[4] = "galletas";
+            prod[5] = "chicles";
+            prod[6] = "masticables";
+            prod[7] = "saladix";
+            Console.WriteLine("0) alfajores");
+            Console.WriteLine("1) turrones");
+            Console.WriteLine("2) cocacola");
+            Console.WriteLine("3) mogul");
+            Console.WriteLine("4) galletas");
+            Console.WriteLine("5) chicles");
+            Console.WriteLine("6) masticables");
+            Console.WriteLine("7) saladix");
+            Console.Write("que desea comprar?: ");
+            int producto = int.Parse(Console.ReadLine());
+            Console.Write("cuanta plata tiene?: ");
+            int plata = int.Parse(Console.ReadLine());
+            while(plata>0)
+            {
+                plata = plata - precio[producto];
+                cantidad++;
+            }
+            Console.WriteLine("puede comprar " + cantidad + " " + prod[producto] + "");
+        }
+    }
+}
