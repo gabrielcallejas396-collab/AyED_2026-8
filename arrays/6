@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sem1 = 0;
+            int sem2 = 0;
+            string[] semana = new string[5];
+            semana[0] = "lunes" ;
+            semana[1] = "martes" ;
+            semana[2] = "miercoles" ;
+            semana[3] = "jueves" ;
+            semana[4] = "viernes" ;
+            int[] sucursal1 = new int[6];
+            int[] sucursal2 = new int[6];
+            for (int i = 0 ; i < 5; i++)
+            {
+                Console.WriteLine("" + semana[i] + "");
+                Console.Write("cuanto vendio la primera sucursal hoy?: ");
+                sucursal1[i] = int.Parse(Console.ReadLine());
+                Console.Write("cuanto vendio la segunda sucursal hoy?: ");
+                sucursal2[i] = int.Parse(Console.ReadLine());
+                if (sucursal1[i] > sucursal2[i])
+                {
+                    sem1++;
+                }
+                else
+                {
+                    sem2++;
+                }
+                sucursal1[5] = sucursal1[5] + sucursal1[i];
+                sucursal2[5] = sucursal2[5] + sucursal2[i];
+            }
+            if(sem1 > sem2)
+            {
+                Console.WriteLine("la sucursal 1 fue la q mas vendio");
+            }
+            else
+            {
+                Console.WriteLine("la sucursal 2 fue la q mas vendio");
+            }
+            if (sucursal1[5] > sucursal2[5])
+            {
+                Console.WriteLine("la sucursal 1 tuvo mas recaudacion un total de " + sucursal1[5] + "");
+            }
+            else
+            {
+                Console.WriteLine("la sucursal 2 tuvo mas recaudacion un total de " + sucursal2[5] + "");
+            }
+        }
+    }
+}
