@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 0;
+            int[] rifa = new int[15];
+            rifa[0] = 1;
+            rifa[1] = 5;
+            rifa[2] = 7;
+            rifa[3] = 3;
+            rifa[4] = 9;
+            rifa[5] = 12;
+            rifa[6] = 15;
+            rifa[7] = 16;
+            rifa[8] = 19;
+            rifa[9] = 20;
+            rifa[10] = 21;
+            rifa[11] = 24;
+            rifa[12] = 23;
+            rifa[13] = 26;
+            rifa[14] = 27;
+            Console.Write("que numero desea para la rifa: ");
+            int numero = int.Parse(Console.ReadLine());
+            for (int i = 0 ; i <= 15 ; i++)
+            {
+             if(numero != rifa[i])
+                {
+                    a = i;
+                    i = 15;
+                }
+            }
+            if (numero != rifa[a])
+            {
+                Console.WriteLine("el numero " + numero + " esta disponible");
+            }
+            else
+            {
+                Console.WriteLine("el numero " + numero + " no esta disponible");
+            }
+        }
+    }
+}
