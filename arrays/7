@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] numero = new  string[8];
+            numero[0] = "primer";
+            numero[1] = "segundo";
+            numero[2] = "tercero";
+            numero[3] = "cuarto";
+            numero[4] = "quinto";
+            numero[5] = "sexto";
+            int[] tiempo = new int[8];
+            tiempo[6] = 10000;
+            for (int i = 0 ; i < 6 ; i++)
+            {
+             Console.Write("ingrese el tiempo del " + numero[i] + " corredor: ");
+             tiempo[i] = int.Parse(Console.ReadLine());
+             if (tiempo[i] < tiempo[6])
+                {
+                    tiempo[6] = tiempo[i];
+                    numero[6] = numero[i];
+                }
+             if (tiempo[i] > tiempo[7])
+                {
+                 tiempo[7] = tiempo[i];
+                 numero[7] = numero[i];
+                }
+            }
+            Console.WriteLine("el tiempo mas raídpo fue de " + tiempo[6] + " segundos y lo hizo el " + numero[6] + " corredor");
+            Console.WriteLine("y el tiempo mas lento fue " + tiempo[7] + " segundos y lo hizo el " + numero[7] + " corredor");
+        }
+    }
+}
