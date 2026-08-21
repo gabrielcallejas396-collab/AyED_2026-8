@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] producto = new int[12];
+            for (int i = 1 ; i < 11 ; i++)
+            {
+                Console.Write("" + i + " ingrese el precio del producto: ");
+                producto[i] = int.Parse(Console.ReadLine());
+                producto[11] = producto[11] + producto[i];
+            }
+            Console.Write("que numero de registro tiene el producto q quiere devolver?:");
+            int o = int.Parse(Console.ReadLine());
+            producto[11] = producto[11] - producto[o];
+            Console.WriteLine("el total quedaria en " + producto[11] + " pesos");
+        }
+    }
+}
