@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] lista = new int[30];
+            lista[25] = 0;
+            lista[26] = 0;
+            lista[27] = 0;
+            lista[28] = 0;
+            lista[29] = 0;
+            for (int i = 0 ; i < 25 ; i++)
+            {
+                Console.Write(" ingrese la clasificacion: ");
+                lista[i] = int.Parse(Console.ReadLine());
+                if (lista[i] == 1 )
+                {
+                    lista[25]++;
+                }
+                if (lista[i] == 2)
+                {
+                    lista[26]++;
+                }
+                if (lista[i] == 3)
+                {
+                    lista[27]++;
+                }
+                if (lista[i] == 4)
+                {
+                    lista[28]++;
+                }
+                if (lista[i] == 5)
+                {
+                    lista[29]++;
+                }
+            }
+            Console.WriteLine("hubo " + lista[25] + " votos al 1, " + lista[26] + " votos al 2," + lista[27] + " votos al 3, " + lista[28] + " votos al 4, " + lista[29] + " votos al 5, ");
+        }
+    }
+}
