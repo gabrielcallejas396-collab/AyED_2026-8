@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] lista = new int[15];
+            for(int i = 0 ; i < 12 ; i++)
+            {
+                Console.Write(""+i+"ingrese la edad de la persona: ");
+                lista[i] = int.Parse(Console.ReadLine());
+                if (lista[i] < 18)
+                {
+                    lista[12]++;
+                }
+                if (lista[i] >= 65)
+                {
+                    lista[13]++;
+                }
+                if (lista[i] > 18 & lista[i] < 65)
+                {
+                    lista[14]++;
+                }
+            }
+            Console.WriteLine("ahi " + lista[12] + " menores de edad");
+            Console.WriteLine("ahi " + lista[13] + " mayores de edad");
+            Console.WriteLine("ahi " + lista[14] + " de edad intermedia");
+        }
+    }
+}
