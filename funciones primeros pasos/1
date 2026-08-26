@@ -1,4 +1,4 @@
- using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,20 +8,26 @@ namespace ConsoleApplication1
 {
     class Program
     {
-        static void contarregresivo()
-        {
+        
+        static void Main(string[] args)
+        {           
             Console.Write("ingrese un numero: ");
             int n = int.Parse(Console.ReadLine());
             int e = n;
-            for (int i = 0 ; i < n ; i++)
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("" + e + "");
+                contarregresivo(e);
                 e--;
             }
         }
-        static void Main(string[] args)
+
+        static float contarregresivo(int m)
         {
-            contarregresivo();
+            Console.WriteLine("" + m + "");
+            m--;
+
+            return m;
         }
     }
 }
