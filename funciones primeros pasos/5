@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese la base: ");
+            int b = int.Parse(Console.ReadLine());
+            Console.Write("inbgrese la potencia:");
+            int p = int.Parse(Console.ReadLine());
+            potencia(b,p);
+        }
+        static void potencia(int n,int m)
+        {
+            int nc = n;
+            int n2 = n;
+            for (int i = m-1; i > 0; i--)
+            {
+                nc = nc * n2;
+            }
+            Console.WriteLine("el resultado de la potencia es " + nc + "");
+        }
+
+
+    }
+}
