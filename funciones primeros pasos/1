@@ -20,8 +20,7 @@ namespace ConsoleApplication1
         {
             for (int i = m; i > 0; i--)
             {
-                Console.WriteLine("" + m + "");
-                m--;
+                Console.WriteLine("" + i + "");
             }
             return m;
         }
