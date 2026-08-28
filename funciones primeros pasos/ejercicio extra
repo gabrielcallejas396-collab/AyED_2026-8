@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero: ");
+            int n = int.Parse(Console.ReadLine());
+            primo(n);
+        }
+        static void primo(int m)
+        {
+            int[] nc = new int[4];
+            nc[0] = m % m;
+            nc[1] = m % 1;
+            nc[3] = 2;
+            for (int i = 2 ; i < m-1 ; i++)
+            {
+                nc[2] = m % i;
+                if (nc[2] == 0)
+                {
+                    nc[3] = nc[2];
+                }
+            }
+            if (nc[0] == 0 & nc[3] != 0)
+            {
+                if(nc[1] == 0)
+                {
+                    Console.WriteLine("el numero es primo");
+                }
+                else
+                {
+                    Console.WriteLine("el numero no es primo");
+                }
+            }
+            else
+            {
+                Console.WriteLine("el numero no es primo");
+            }
+        }
+    }
+}
