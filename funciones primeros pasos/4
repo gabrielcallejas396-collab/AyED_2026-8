@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("ingrese un numero: ");
+            int n = int.Parse(Console.ReadLine());
+            factorial(n);
+        }
+
+        static void factorial (int m)
+        {
+            int[] e = new int[2];
+            e[1] = m;   
+            for ( int i = m-1 ; i > 0 ; i--)
+            {
+                e[0] = e[1] * i;
+                e[1] = e[0];     
+            }
+            Console.WriteLine("el factorial es " + e[0] + " ");
+        }
+    }
+}
