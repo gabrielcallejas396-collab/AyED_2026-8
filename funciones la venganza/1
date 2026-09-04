@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void pedir_numeros()
+        {
+            int numero = 0;
+            Console.Write("ingrese un numero: ");
+            numero = int.Parse(Console.ReadLine());
+            int mayor = numero;
+            determinar_mayor(numero, mayor);
+            Console.Write("desea seguir ingresando numeros: ");
+            string condicion = Console.ReadLine();
+            while (condicion == "si")
+            {
+                Console.Write("ingrese un numero: ");
+                numero = int.Parse(Console.ReadLine());
+                Console.Write("desea seguir ingresando numeros: ");
+                condicion = Console.ReadLine();
+                determinar_mayor(numero, mayor);
+            }
+            Console.WriteLine("el mayor es " + mayor + ""); 
+        }
+
+        static void determinar_mayor(int a , int b)
+        {
+          if(a > b)
+            {
+                b = a;
+            }
+        }
+        static void Main(string[] args)
+        {
+            pedir_numeros();
+
+        }
+    }
+}
