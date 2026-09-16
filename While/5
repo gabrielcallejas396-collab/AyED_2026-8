@@ -11,15 +11,19 @@ namespace ConsoleApplication1
 
         static void Main(string[] args)
         {
-            int i = 0;
-            int numero = 0;
+            int p = 0;
+            int inp = 0; 
+            int suma = 0;
+            int i = 1;
+            int numero = 1;
             string condicion = "";
             int mayor = 0;
             int menor = 100000;
             int resultado = determinar_mayor(numero, mayor);
-            int men = determinar_menor(menor, numero);
-            int prome = 0
-                promedio(i, numero);
+            int men = determinar_menor(menor, suma);
+            int prome = promedio(i, numero);
+            i--;
+            numero--;
             do
             {
                 i++;
@@ -28,18 +32,33 @@ namespace ConsoleApplication1
                 Console.Write("desea seguir ingresando numeros: ");
                 condicion = Console.ReadLine();
                 resultado = determinar_mayor(numero, mayor);
+                mayor = resultado;
                 men = determinar_menor(menor, numero);
-                prome = promedio(i, numero,prome);
+                menor = men;
+                suma = numero + suma;
+                int par = determinar_par(numero);
+                if (par == 0)
+                {
+                    p++;
+                }
+                else
+                {
+                    inp++;
+                }
                 if (condicion == "si")
                 {
 
                 }
                 else
                 {
+                    prome = promedio(i, suma);
                     i = i - 190;
                 }
             } while (i >= 0);
-            Console.WriteLine("el mayor es" + resultado + "");
+            Console.WriteLine("el mayor es " + resultado + "");
+            Console.WriteLine("el menor es " + men + "");
+            Console.WriteLine("el promedio es " + prome + "");
+            Console.WriteLine("el ahi es " + p + " pares " + inp + " inpares");
         }
         static int determinar_mayor(int a, int b)
         {
@@ -57,9 +76,15 @@ namespace ConsoleApplication1
             }
             return m;
         }
-        static int promedio(int o, int num, int nc)
+        static int promedio(int o, int suma)
         {
-            num = num + num;
+            suma = suma / o;
+            return suma;
+        }
+        static int determinar_par(int num)
+        {
+            num = num % 2;
+            return num;
         }
     }
 }
