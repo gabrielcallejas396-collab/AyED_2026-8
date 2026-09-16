@@ -4,22 +4,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication6
+namespace ConsoleApplication1
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            Console.Write("defina una contraseña: ");
-            string guardada = (Console.ReadLine());
-            Console.Write("introdusca la contraseña: ");
-            string intento = (Console.ReadLine());
+            int i = 0;
+            int numero = 0;
+            string condicion = "";
+            int mayor = 0;
+            int menor = 100000;
+            int resultado = determinar_mayor(numero, mayor);
+            int men = determinar_menor(menor, numero);
+            int prome = 0
+                promedio(i, numero);
             do
             {
-                Console.Write("introdusca la contraseña: ");
-                intento = (Console.ReadLine());
-            } while (intento != guardada);
-            Console.WriteLine("acceso permitido");
+                i++;
+                Console.Write("ingrese un numero: ");
+                numero = int.Parse(Console.ReadLine());
+                Console.Write("desea seguir ingresando numeros: ");
+                condicion = Console.ReadLine();
+                resultado = determinar_mayor(numero, mayor);
+                men = determinar_menor(menor, numero);
+                prome = promedio(i, numero,prome);
+                if (condicion == "si")
+                {
+
+                }
+                else
+                {
+                    i = i - 190;
+                }
+            } while (i >= 0);
+            Console.WriteLine("el mayor es" + resultado + "");
+        }
+        static int determinar_mayor(int a, int b)
+        {
+            if (a > b)
+            {
+                b = a;
+            }
+            return b;
+        }
+        static int determinar_menor(int m, int n)
+        {
+            if (n < m)
+            {
+                m = n;
+            }
+            return m;
+        }
+        static int promedio(int o, int num, int nc)
+        {
+            num = num + num;
         }
     }
 }
