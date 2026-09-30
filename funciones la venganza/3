@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nc = 0;
+            int pares = 0;
+            int inpar = 0;
+            int suma = 0;
+            Console.Write("ingrese un numero: ");
+            int primer = int.Parse(Console.ReadLine());
+            Console.Write("ingrese otro numero:");
+            int segundo = int.Parse(Console.ReadLine());
+            for (int i = primer+1 ; i < segundo ; i++)
+            {
+                Console.WriteLine("" + i + "");
+                suma = sumas(i, suma);
+                nc = determinar_par(i);
+                if (nc == 1)
+                {
+                    pares++;
+                }
+                else
+                {
+                    inpar++;
+                }
+            }
+            Console.WriteLine("ahi " + pares + " pares y " + inpar + " inpares");
+            Console.WriteLine("la suma de todos los valores da " + suma + "");
+        }
+        static int determinar_par (int mun)
+        {
+            int con;
+            if (mun % 2 == 0)
+            {
+                con = 1;
+            }
+            else
+            {
+                con = 0;
+            }
+            return con;
+        }
+       
+        static int sumas (int num, int a)
+        {
+            num = num + a;
+            return num;
+        }
+    }
+}
