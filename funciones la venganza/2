@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int resultado;
+            Console.Write("ingrese un numero: ");
+            int n = int.Parse(Console.ReadLine());
+            resultado = deter_num_perfecto(n);
+            if (resultado == n)
+            {
+                Console.WriteLine("es un numero perfecto");
+            }
+            else
+            {
+                Console.WriteLine("no es un numero perfecto");
+            }
+        }
+        static int deter_num_perfecto(int m)
+        {
+            int suma = 0;
+            int divisor = 0;
+            for (int i = 1 ; i < m ; i++)
+             {
+                if (m % i == 0)
+                {
+                    divisor = i;
+                    suma = suma + divisor;
+                }
+             }
+            return suma;
+        }
+    }
+}
