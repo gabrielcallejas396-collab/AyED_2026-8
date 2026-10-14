@@ -10,13 +10,14 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
+            int nc = 0;
             int m = 0;
             int numero;
             int mayor;
             Console.Write("cuantos numeros desea ingresar: ");
             int cantidad = int.Parse(Console.ReadLine());
             int segundo = 0;
-            for (int i = 1; i < cantidad; i++)
+            for (int i = 1; i <= cantidad; i++)
             {
                 Console.Write("ingrese un numero: ");
                 numero = int.Parse(Console.ReadLine());
@@ -25,7 +26,19 @@ namespace ConsoleApplication2
                 {
                     segundo = mayor;
                 }
-                if (segundo numero)
+                if (segundo<numero & nc==0)
+                {
+                    segundo = numero;
+                    nc++;
+                }
+            }
+            if (nc==0)
+            {
+                Console.WriteLine("no hubo un segundo numero mayor al primero");
+            }
+            else
+            {
+                Console.WriteLine("el segundo numero mayor fue " + segundo + "");
             }
         }
         static int determinar_mayor(int a, int b)
