@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nc = 0;
+            int tamaño;
+            Console.Write("ingrese un numero: ");
+            string n = Console.ReadLine();
+            int numero = int.Parse(n); 
+            tamaño = n.Length;
+            nc = determinar_capicua(tamaño, numero);
+            if(nc == 1)
+            {
+                n = "si";
+            }
+            else
+            {
+                n = "no";
+            }
+            Console.WriteLine("el numero posee " + tamaño + " de digitos y " + n + " es capicúa");
+        }
+        static int determinar_capicua(int ab, int ba)
+        {
+            
+            int n1 = 0;
+            int[] numeros = new int[ab];
+            int divi = 1;
+            numeros[ab-1] = ba % 10;
+            for (int i = 2; i <= ab; i++)
+            {
+                divi = 10 * divi;
+                n1 = ba / divi;
+                numeros[ab - i] = n1 % 10;
+            }
+            int u = 0;
+            int con = 0;
+            for (int o = 1; o <= ab/2; o++)
+            {
+                if (numeros[con] == numeros[ab - o])
+                {
+                    u++;
+                }
+            }
+            int resultado = 0;
+            if (u >= ab % 2)
+            {
+                resultado++;
+            }
+            return resultado;
+        }
+    }
+}
