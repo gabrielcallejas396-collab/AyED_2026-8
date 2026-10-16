@@ -1,0 +1,78 @@
+using System;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Ingrese la cantidad de numeros enteros: ");
+            int cantidad = int.Parse(Console.ReadLine());
+
+            int[] numeros = new int[cantidad];
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                Console.Write("Ingrese un numero entero: ");
+                numeros[i] = int.Parse(Console.ReadLine());
+            }
+
+            mostrar(numeros, cantidad);
+        }
+
+        static int determinar(int[] numeros, int cantidad, int posicion)
+        {
+            int con = 0;
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                if (numeros[posicion] == numeros[i])
+                {
+                    con++;
+                }
+            }
+
+            return con;
+        }
+
+        static void mostrar(int[] numeros, int cantidad)
+        {
+            int mayor = 0;
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                int repeticiones = determinar(numeros, cantidad, i);
+
+                if (repeticiones > mayor)
+                {
+                    mayor = repeticiones;
+                }
+            }
+
+            Console.WriteLine("Los numeros que mas se repitieron fueron:");
+
+            for (int i = 0; i < cantidad; i++)
+            {
+                int repetido = 0;
+
+                for (int o = 0; o < i; o++)
+                {
+                    if (numeros[i] == numeros[o])
+                    {
+                        repetido++;
+                    }
+                }
+
+                if (repetido == 0)
+                {
+                    int veces = determinar(numeros, cantidad, i);
+
+                    if (veces == mayor)
+                    {
+                        Console.WriteLine(numeros[i] + " se repitio " + veces + " veces");
+                    }
+                }
+            }
+        }
+    }
+}
