@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int nc = 1;
+            int dos = 0;
+            int tres = 0;
+            int cinco = 0;
+            int con = 0;
+            Console.Write("ingrese un numero: ");
+            int numero = int.Parse(Console.ReadLine());
+            do
+            {
+                numero = numero / nc;
+                Console.WriteLine("" + numero + "");
+                nc = prim(numero);
+                if (nc == 2)
+                {
+                    dos++;
+                }
+                if (nc == 3)
+                {
+                    tres++;
+                }
+                if (nc == 5)
+                {
+                    cinco++;
+                }
+                Console.WriteLine("" + numero + " / " + nc + "");
+                if(nc==0)
+                {
+                    con++;
+                }
+            } while (con == 0);
+            Console.WriteLine("total de 2 " + dos + " total de 3 " + tres + " total de 5 " + cinco + "");
+        }
+        static int prim(int n)
+        {
+            int salida=0;
+            if (n % 5 == 0)
+            {
+                salida = 5;
+            }
+            else
+            {
+                if (n % 3 == 0)
+                {
+                    salida = 3;
+                }
+                else
+                {
+                    if (n % 2 == 0)
+                    {
+                        salida = 2;
+                    }
+                }
+            }
+            return salida;
+        }
+    }
+}
