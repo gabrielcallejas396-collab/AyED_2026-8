@@ -24,7 +24,9 @@ namespace tp_ultimo_de_prueba
             int Total_daño_Aa = 0; //contador del daño causado en todo el juego del jugador 1 del equipo 1
             int PV_A_a = 0; //vida de gladiador 1 del equipo 1  
             int ATK_A_a = 0; //ataque del gladiador 1 del equipo 1 
-            //gladiador 2 equipo 1 
+            //
+            //gladiador 2 equipo 1
+            //
             int Gladiador2_Equi1 = 0;// nombre gladiador 2 equipo 1
             int Total_daño_Ab = 0; //contador del daño causado en todo el juego del jugador 2 del equipo 1
             int PV_A_b = 0; //vida de gladiador 2 del equipo 1  
